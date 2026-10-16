@@ -753,7 +753,7 @@ color: rgba(247,244,239,0.5);
 /* Mobile: burger menu on the right */
 @media (max-width: 768px){
   .header-inner{
-    padding-right: 0;
+    padding-right: 24px;
   }
   .nav-toggle{
     margin-left: auto;
