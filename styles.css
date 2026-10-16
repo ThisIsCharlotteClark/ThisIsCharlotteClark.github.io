@@ -455,7 +455,7 @@ section + section{
   padding-left: 32px;
   font-size: 0.9rem;
   color: var(--text-muted);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ---------------- Trustee ---------------- */
