@@ -762,8 +762,22 @@ color: rgba(247,244,239,0.5);
   .hero-portrait{
     margin: 0 auto;
   }
-  @media (max-width: 768px) {
+/* Hide the mobile copy on desktop */
+.credential-rail.credential-rail--mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Keep the original hidden on mobile */
   .credential-rail {
     display: none;
+  }
+
+  /* Show the copy before "Beyond marketing" */
+  .credential-rail.credential-rail--mobile {
+    display: block;
+    position: static;
+    width: auto;
+    margin: 2rem 0;
   }
 }
