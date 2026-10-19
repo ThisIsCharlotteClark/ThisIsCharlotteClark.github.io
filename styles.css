@@ -166,7 +166,7 @@ p{ margin: 0; }
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  padding-right: 150px
+  padding-right: 150px;
 }
 
 .logo{
@@ -695,8 +695,6 @@ color: rgba(247,244,239,0.5);
   text-decoration: none;
 }
 
-}
-
 /* ---------------- Scroll reveal ---------------- */
 
 .reveal{
@@ -751,57 +749,76 @@ color: rgba(247,244,239,0.5);
   margin-bottom: 12px;
 }
 /* Mobile: burger menu on the right */
-@media (max-width: 768px){
-  .header-inner{
+
+@media (max-width: 768px) {
+  .header-inner {
     padding-right: 24px;
   }
-  .nav-toggle{
+
+  .nav-toggle {
     margin-left: auto;
     flex-shrink: 0;
   }
-  .hero-portrait{
+
+  .hero-portrait {
     margin: 0 auto;
   }
-/* Hide the mobile copy on desktop */
-.credential-rail.credential-rail--mobile {
+}
+
+/* Hide Always Learning on desktop */
+
+/* Hide the mobile qualifications section on desktop */
+.credentials-mobile {
+  display: none !important;
+}
+
+/* Hide the mobile-specific list by default */
+.credential-rail--mobile {
   display: none;
 }
 
-/* Hidden on desktop */
-.mobile-only {
-  display: none;
-}
-
+/* Mobile qualifications layout */
 @media (max-width: 768px) {
-  /* Keep the original desktop rail hidden on mobile */
-  .credential-rail {
-    display: none;
+  /* Hide the original sidebar credentials on mobile */
+  .hero-sidebar .credential-rail {
+    display: none !important;
   }
 
-  /* Show the mobile qualifications block */
-  .mobile-only {
-    display: block;
+  /* Show the separate qualifications section on mobile */
+  .credentials-mobile {
+    display: block !important;
   }
 
-  /* Lines above and below the qualifications block */
   .credentials-mobile .wrap {
     border-top: 1px solid #d6cfc8;
     border-bottom: 1px solid #d6cfc8;
-    padding: 2.5rem 0;
+    padding: 2.5rem 24px;
   }
 
-  /* The mobile list: no line of its own, one item per row */
-  .credential-rail.credential-rail--mobile {
+  .credentials-mobile ul.credential-rail--mobile {
     display: block;
     position: static;
     width: auto;
-    margin: 1.5rem 0 0;
-    padding-top: 0;
-    border-top: none;
+    margin: 2rem 0 0;
+    padding: 0 0 0 1.25rem;
+    border: none;
+    list-style: none;
   }
 
-  .credential-rail--mobile li {
-    display: block;
-    margin-bottom: 0.75rem;
+  .credentials-mobile .credential-rail--mobile li {
+    display: list-item;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: var(--text-muted);
   }
 }
+
+@media (min-width: 769px) {
+  body main > div.mobile-only.credentials-mobile {
+    display: none !important;
+  }
+}
+
