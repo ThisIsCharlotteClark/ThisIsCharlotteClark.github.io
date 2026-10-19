@@ -784,24 +784,26 @@ color: rgba(247,244,239,0.5);
   }
 
   /* Lines above and below the qualifications block */
-  .credentials-mobile .wrap {
-    border-top: 1px solid #d6cfc8;
-    border-bottom: 1px solid #d6cfc8;
-    padding: 2.5rem 0;
-  }
+
+.credentials-mobile .wrap {
+  border-top: 1px solid #d6cfc8;
+  border-bottom: 1px solid #d6cfc8;
+  padding: 2.5rem 24px;
+}
+
 
   /* The mobile list: no line of its own, one item per row */
   .credential-rail.credential-rail--mobile {
     display: block;
     position: static;
     width: auto;
-    margin: 1.5rem 0 0;
+    margin: 3rem 0 0;
     padding-top: 0;
     border-top: none;
   }
 
   .credential-rail--mobile li {
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
   }
 }
